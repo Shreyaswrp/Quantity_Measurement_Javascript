@@ -135,3 +135,75 @@ describe("CompareLengths", function () {
     assert.equal(length1,length2);
   });
 });
+
+describe("CompareLengths", function () {
+  it("given0YardAnd0Yard_WhenCompared_ShouldReturnEqual", function() {
+    var length1 = new QuantityMeasure(Units.YARD,0).getBaseUnit(function(data){
+    return data;
+    });
+    var length2 = new QuantityMeasure(Units.YARD,0).getBaseUnit(function(data){
+    return data;
+    });
+    assert.equal(length1,length2);
+  });
+});
+
+describe("CompareLengths", function () {
+  it("given3FeetAnd1Yard_WhenCompared_ShouldReturnEqual", function() {
+    var length1 = new QuantityMeasure(Units.FEET,3).getBaseUnit(function(data){
+    return data;
+    });
+    var length2 = new QuantityMeasure(Units.YARD,1).getBaseUnit(function(data){
+    return data;
+    });
+    assert.equal(length1,length2);
+  });
+});
+
+describe("CompareLengths", function () {
+  it("given1FeetAnd1Yard_WhenCompared_ShouldReturnNotEqual", function() {
+    var length1 = new QuantityMeasure(Units.FEET,1).getBaseUnit(function(data){
+    return data;
+    });
+    var length2 = new QuantityMeasure(Units.YARD,1).getBaseUnit(function(data){
+    return data;
+    });
+    assert.notEqual(length1,length2);
+  });
+});
+
+describe("CompareLengths", function () {
+  it("given1InchAnd1Yard_WhenCompared_ShouldReturnNotEqual", function() {
+    var length1 = new QuantityMeasure(Units.INCH,1).getBaseUnit(function(data){
+    return data;
+    });
+    var length2 = new QuantityMeasure(Units.YARD,1).getBaseUnit(function(data){
+    return data;
+    });
+    assert.notEqual(length1,length2);
+  });
+});
+
+describe("CompareLengths", function () {
+  it("given1YardAnd36Inch_WhenCompared_ShouldReturnEqual", function() {
+    var length1 = new QuantityMeasure(Units.YARD,1).getBaseUnit(function(data){
+    return data;
+    });
+    var length2 = new QuantityMeasure(Units.INCH,36).getBaseUnit(function(data){
+    return data;
+    });
+    assert.equal(length1,length2);
+  });
+});
+
+describe("CompareLengths", function () {
+  it("given1YardAnd3Feet_WhenCompared_ShouldReturnEqual", function() {
+    var length1 = new QuantityMeasure(Units.YARD,1).getBaseUnit(function(data){
+    return data;
+    });
+    var length2 = new QuantityMeasure(Units.FEET,3).getBaseUnit(function(data){
+    return data;
+    });
+    assert.equal(length1,length2);
+  });
+});
