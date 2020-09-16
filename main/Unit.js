@@ -1,17 +1,8 @@
 const Units = {
     FEET: 12,
     INCH: 1
- };
+};
 
-class Unit{
-    
-    constructor(baseUnit){
-        const BASE_UNIT = baseUnit;
-    }
-    
-    getBaseUnit() {
-        return BASE_UNIT;
-    }
- }
+Object.freeze(Units);
 
- module.exports = Unit;
+module.exports = Units;
