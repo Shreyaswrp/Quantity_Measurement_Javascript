@@ -207,3 +207,39 @@ describe("CompareLengths", function () {
     assert.equal(length1,length2);
   });
 });
+
+describe("CompareLengths", function () {
+  it("given0cmAnd0cm_WhenCompared_ShouldReturnEqual", function() {
+    var length1 = new QuantityMeasure(Units.CM,0).getBaseUnit(function(data){
+    return data;
+    });
+    var length2 = new QuantityMeasure(Units.CM,0).getBaseUnit(function(data){
+    return data;
+    });
+    assert.equal(length1,length2);
+  });
+});
+
+describe("CompareLengths", function () {
+  it("given0cmAnd1cm_WhenCompared_ShouldReturnNotEqual", function() {
+    var length1 = new QuantityMeasure(Units.CM,0).getBaseUnit(function(data){
+    return data;
+    });
+    var length2 = new QuantityMeasure(Units.CM,1).getBaseUnit(function(data){
+    return data;
+    });
+    assert.notEqual(length1,length2);
+  });
+});
+
+describe("CompareLengths", function () {
+  it("given2InchAnd5cm_WhenCompared_ShouldReturnEqual", function() {
+    var length1 = new QuantityMeasure(Units.INCH,2).getBaseUnit(function(data){
+    return data;
+    });
+    var length2 = new QuantityMeasure(Units.CM,5).getBaseUnit(function(data){
+    return data;
+    });
+    assert.equal(length1,length2);
+  });
+});
