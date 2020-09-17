@@ -444,3 +444,18 @@ describe("CompareWeights", function () {
     assert.equal(sum,1001);
   });
 });
+
+describe("CompareTemperature", function () {
+  it("given212FahrenheitAnd100Celcius_WhenCompared_ShouldReturnEqual", function() {
+    var convertedTemp = QuantityMeasure.temperatureConversion(100,function(data){
+    return data;
+    });
+    var temp1 = new QuantityMeasure(Units.FAHRENHEIT,212).getBaseUnit(function(data){
+    return data;
+    });
+    var temp2 = new QuantityMeasure(Units.CELCIUS,convertedTemp).getBaseUnit(function(data){
+    return data;
+    });
+    assert.equal(temp1,temp2);
+  });
+});

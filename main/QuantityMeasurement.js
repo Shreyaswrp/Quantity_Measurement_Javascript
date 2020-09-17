@@ -16,6 +16,10 @@ class QuantityMeasure{
         var sum = quantity1 + quantity2;
         return callback(sum);
     }
+
+    static temperatureConversion(temperature,callback) {
+        return callback((temperature * 9 / 5) + 32);
+    }
 }
 
 module.exports = QuantityMeasure;
