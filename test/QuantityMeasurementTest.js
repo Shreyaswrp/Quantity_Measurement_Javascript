@@ -381,3 +381,66 @@ describe("CompareVolumes", function () {
     assert.equal(sum,2);
   });
 });
+
+describe("CompareWeights", function () {
+  it("given0KgAnd0Kg_WhenCompared_ShouldReturnEqual", function() {
+    var weight1 = new QuantityMeasure(Units.KG,0).getBaseUnit(function(data){
+    return data;
+    });
+    var weight2 = new QuantityMeasure(Units.KG,0).getBaseUnit(function(data){
+    return data;
+    });
+    assert.equal(weight1,weight2);
+  });
+});
+
+describe("CompareWeights", function () {
+  it("given0KgAnd1Kg_WhenCompared_ShouldReturnNotEqual", function() {
+    var weight1 = new QuantityMeasure(Units.KG,0).getBaseUnit(function(data){
+    return data;
+    });
+    var weight2 = new QuantityMeasure(Units.KG,1).getBaseUnit(function(data){
+    return data;
+    });
+    assert.notEqual(weight1,weight2);
+  });
+});
+
+describe("CompareWeights", function () {
+  it("given1KgAnd1000g_WhenCompared_ShouldReturnEqual", function() {
+    var weight1 = new QuantityMeasure(Units.KG,1).getBaseUnit(function(data){
+    return data;
+    });
+    var weight2 = new QuantityMeasure(Units.GRAM,1000).getBaseUnit(function(data){
+    return data;
+    });
+    assert.equal(weight1,weight2);
+  });
+});
+
+describe("CompareWeights", function () {
+  it("given1TonneAnd1000Kg_WhenCompared_ShouldReturnEqual", function() {
+    var weight1 = new QuantityMeasure(Units.TONNE,1).getBaseUnit(function(data){
+    return data;
+    });
+    var weight2 = new QuantityMeasure(Units.KG,1000).getBaseUnit(function(data){
+    return data;
+    });
+    assert.equal(weight1,weight2);
+  });
+});
+
+describe("CompareWeights", function () {
+  it("given1TonneAnd1000Gram_WhenAdded_ShouldReturn1001Kg", function() {
+    var weight1 = new QuantityMeasure(Units.TONNE,1).getBaseUnit(function(data){
+    return data;
+    });
+    var weight2 = new QuantityMeasure(Units.GRAM,1000).getBaseUnit(function(data){
+    return data;
+    });
+    var sum = QuantityMeasure.add(weight1,weight2,function(data){
+    return data;
+    });
+    assert.equal(sum,1001);
+  });
+});

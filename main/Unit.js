@@ -5,7 +5,10 @@ const Units = {
     CM: 0.4,
     ML: 0.001,
     LITRE: 1,
-    GALLON: 3.78
+    GALLON: 3.78,
+    KG: 1,
+    GRAM: 0.001,
+    TONNE: 1000
 };
 
 Object.freeze(Units);
