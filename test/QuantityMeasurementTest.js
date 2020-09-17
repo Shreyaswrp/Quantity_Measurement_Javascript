@@ -303,3 +303,51 @@ describe("CompareLengths", function () {
     assert.equal(sum,3);
   });
 });
+
+describe("CompareVolumes", function () {
+  it("given0LitreAnd0Litre_WhenCompared_ShouldReturnEqual", function() {
+    var volume1 = new QuantityMeasure(Units.LITRE,0).getBaseUnit(function(data){
+    return data;
+    });
+    var volume2 = new QuantityMeasure(Units.LITRE,0).getBaseUnit(function(data){
+    return data;
+    });
+    assert.equal(volume1,volume2);
+  });
+});
+
+describe("CompareVolumes", function () {
+  it("given0LitredAnd1Litre_WhenCompared_ShouldReturnNotEqual", function() {
+    var volume1 = new QuantityMeasure(Units.LITRE,0).getBaseUnit(function(data){
+    return data;
+    });
+    var volume2 = new QuantityMeasure(Units.LITRE,1).getBaseUnit(function(data){
+    return data;
+    });
+    assert.notEqual(volume1,volume2);
+  });
+});
+
+describe("CompareVolumes", function () {
+  it("given1LitredAnd1000MiliLitre_WhenCompared_ShouldReturnEqual", function() {
+    var volume1 = new QuantityMeasure(Units.LITRE,1).getBaseUnit(function(data){
+    return data;
+    });
+    var volume2 = new QuantityMeasure(Units.ML,1000).getBaseUnit(function(data){
+    return data;
+    });
+    assert.equal(volume1,volume2);
+  });
+});
+
+describe("CompareVolumes", function () {
+  it("given1GallonAnd3.78Litre_WhenCompared_ShouldReturnEqual", function() {
+    var volume1 = new QuantityMeasure(Units.GALLON,1).getBaseUnit(function(data){
+    return data;
+    });
+    var volume2 = new QuantityMeasure(Units.LITRE,3.78).getBaseUnit(function(data){
+    return data;
+    });
+    assert.equal(volume1,volume2);
+  });
+});
