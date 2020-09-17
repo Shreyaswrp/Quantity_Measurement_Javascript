@@ -243,3 +243,63 @@ describe("CompareLengths", function () {
     assert.equal(length1,length2);
   });
 });
+
+describe("CompareLengths", function () {
+  it("given2InchAnd2Inch_WhenAdded_ShouldReturn4Inch", function() {
+    var length1 = new QuantityMeasure(Units.INCH,2).getBaseUnit(function(data){
+    return data;
+    });
+    var length2 = new QuantityMeasure(Units.INCH,2).getBaseUnit(function(data){
+    return data;
+    });
+    var sum = QuantityMeasure.add(length1,length2,function(data){
+    return data;
+    });
+    assert.equal(sum,4);
+  });
+});
+
+describe("CompareLengths", function () {
+  it("given1FeetAnd2Inch_WhenAdded_ShouldReturn14Inch", function() {
+    var length1 = new QuantityMeasure(Units.FEET,1).getBaseUnit(function(data){
+    return data;
+    });
+    var length2 = new QuantityMeasure(Units.INCH,2).getBaseUnit(function(data){
+    return data;
+    });
+    var sum = QuantityMeasure.add(length1,length2,function(data){
+    return data;
+    });
+    assert.equal(sum,14);
+  });
+});
+
+describe("CompareLengths", function () {
+  it("given1FeetAnd1Feet_WhenAdded_ShouldReturn24Inch", function() {
+    var length1 = new QuantityMeasure(Units.FEET,1).getBaseUnit(function(data){
+    return data;
+    });
+    var length2 = new QuantityMeasure(Units.FEET,1).getBaseUnit(function(data){
+    return data;
+    });
+    var sum = QuantityMeasure.add(length1,length2,function(data){
+    return data;
+    });
+    assert.equal(sum,24);
+  });
+});
+
+describe("CompareLengths", function () {
+  it("given2InchAnd2.5cm_WhenAdded_ShouldReturn3Inch", function() {
+    var length1 = new QuantityMeasure(Units.INCH,2).getBaseUnit(function(data){
+    return data;
+    });
+    var length2 = new QuantityMeasure(Units.CM,2.5).getBaseUnit(function(data){
+    return data;
+    });
+    var sum = QuantityMeasure.add(length1,length2,function(data){
+    return data;
+    });
+    assert.equal(sum,3);
+  });
+});

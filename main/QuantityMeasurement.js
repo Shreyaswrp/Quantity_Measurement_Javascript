@@ -11,6 +11,11 @@ class QuantityMeasure{
     getBaseUnit(callback){
        return callback(this.VALUE);
     }
+
+    static add(quantity1,quantity2,callback) {
+        var sum = quantity1 + quantity2;
+        return callback(sum);
+    }
 }
 
 module.exports = QuantityMeasure;
