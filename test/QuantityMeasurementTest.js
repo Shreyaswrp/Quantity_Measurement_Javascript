@@ -351,3 +351,33 @@ describe("CompareVolumes", function () {
     assert.equal(volume1,volume2);
   });
 });
+
+describe("CompareVolumes", function () {
+  it("given1GallonAnd3.78Litres_WhenAdded_ShouldReturn7.56Litres", function() {
+    var volume1 = new QuantityMeasure(Units.GALLON,1).getBaseUnit(function(data){
+    return data;
+    });
+    var volume2 = new QuantityMeasure(Units.LITRE,3.78).getBaseUnit(function(data){
+    return data;
+    });
+    var sum = QuantityMeasure.add(volume1,volume2,function(data){
+    return data;
+    });
+    assert.equal(sum,7.56);
+  });
+});
+
+describe("CompareVolumes", function () {
+  it("given1LitreAnd1000MiliLitres_WhenAdded_ShouldReturn2Litres", function() {
+    var volume1 = new QuantityMeasure(Units.LITRE,1).getBaseUnit(function(data){
+    return data;
+    });
+    var volume2 = new QuantityMeasure(Units.ML,1000).getBaseUnit(function(data){
+    return data;
+    });
+    var sum = QuantityMeasure.add(volume1,volume2,function(data){
+    return data;
+    });
+    assert.equal(sum,2);
+  });
+});
