@@ -12,52 +12,42 @@ describe("CompareLengths", function () {
       });
       assert.equal(length1,length2);
     });
-});
 
-describe("CompareLengths", function () {
-  it("given0FeetAnd1Feet_WhenCompared_ShouldReturnNotEqual", function() {
-    var length1 = new QuantityMeasure(Units.FEET,0).getBaseUnit(function(data){
-    return data;
+    it("given0FeetAnd1Feet_WhenCompared_ShouldReturnNotEqual", function() {
+      var length1 = new QuantityMeasure(Units.FEET,0).getBaseUnit(function(data){
+      return data;
+      });
+      var length2 = new QuantityMeasure(Units.FEET,1).getBaseUnit(function(data){
+      return data;
+      });
+      assert.notEqual(length1,length2);
     });
-    var length2 = new QuantityMeasure(Units.FEET,1).getBaseUnit(function(data){
-    return data;
-    });
-    assert.notEqual(length1,length2);
-  });
-});
 
-describe("CompareLengths", function () {
-  it("given0FeetAndNull_WhenCompared_ShouldReturnNotEqual", function() {
-    var length1 = new QuantityMeasure(Units.FEET,0).getBaseUnit(function(data){
-    return data;
+    it("given0FeetAndNull_WhenCompared_ShouldReturnNotEqual", function() {
+      var length1 = new QuantityMeasure(Units.FEET,0).getBaseUnit(function(data){
+      return data;
+      });
+      var length2 = null;
+      assert.notEqual(length1,length2);
     });
-    var length2 = null;
-    assert.notEqual(length1,length2);
-  });
-});
 
-describe("CompareLengths", function () {
-  it("givenSameReference_WhenCompared_ShouldReturnEqual", function() {
-    var length1 = new QuantityMeasure(Units.FEET,0).getBaseUnit(function(data){
-    return data;
+    it("givenSameReference_WhenCompared_ShouldReturnEqual", function() {
+      var length1 = new QuantityMeasure(Units.FEET,0).getBaseUnit(function(data){
+      return data;
+      });
+      assert.equal(length1,length1);
     });
-    assert.equal(length1,length1);
-  });
-});
 
-describe("CompareLengths", function () {
-  it("givenSameTypeLengths_WhenCompared_ShouldReturnEqual", function() {
-    var length1 = new QuantityMeasure(Units.FEET,0).getBaseUnit(function(data){
-    return data;
+   it("givenSameTypeLengths_WhenCompared_ShouldReturnEqual", function() {
+      var length1 = new QuantityMeasure(Units.FEET,0).getBaseUnit(function(data){
+      return data;
+      });
+      var length2 = new QuantityMeasure(Units.FEET,0).getBaseUnit(function(data){
+      return data;
+      });
+      assert.equal(typeof(length1),typeof(length2));
     });
-    var length2 = new QuantityMeasure(Units.FEET,0).getBaseUnit(function(data){
-    return data;
-    });
-    assert.equal(typeof(length1),typeof(length2));
-  });
-});
 
-describe("CompareLengths", function () {
   it("given1FeetAnd12Inch_WhenCompared_ShouldReturnEqual", function() {
     var length1 = new QuantityMeasure(Units.FEET,1).getBaseUnit(function(data){
     return data;
@@ -67,9 +57,7 @@ describe("CompareLengths", function () {
     });
     assert.equal(length1,length2);
   });
-});
 
-describe("CompareLengths", function () {
   it("given0InchAnd0Inch_WhenCompared_ShouldReturnEqual", function() {
     var length1 = new QuantityMeasure(Units.INCH,0).getBaseUnit(function(data){
     return data;
@@ -79,9 +67,7 @@ describe("CompareLengths", function () {
     });
     assert.equal(length1,length2);
   });
-});
 
-describe("CompareLengths", function () {
   it("given0InchAnd1Inch_WhenCompared_ShouldReturnNotEqual", function() {
     var length1 = new QuantityMeasure(Units.INCH,0).getBaseUnit(function(data){
     return data;
@@ -91,9 +77,7 @@ describe("CompareLengths", function () {
     });
     assert.notEqual(length1,length2);
   });
-});
 
-describe("CompareLengths", function () {
   it("given0InchAndNull_WhenCompared_ShouldReturnNotEqual", function() {
     var length1 = new QuantityMeasure(Units.INCH,0).getBaseUnit(function(data){
     return data;
@@ -101,18 +85,14 @@ describe("CompareLengths", function () {
     var length2 = null;
     assert.notEqual(length1,length2);
   });
-});
 
-describe("CompareLengths", function () {
   it("givenSameReference_WhenCompared_ShouldReturnEqual", function() {
     var length1 = new QuantityMeasure(Units.INCH,0).getBaseUnit(function(data){
     return data;
     });
     assert.equal(length1,length1);
   });
-});
 
-describe("CompareLengths", function () {
   it("givenSameTypeLengths_WhenCompared_ShouldReturnEqual", function() {
     var length1 = new QuantityMeasure(Units.INCH,0).getBaseUnit(function(data){
     return data;
@@ -122,9 +102,7 @@ describe("CompareLengths", function () {
     });
     assert.equal(typeof(length1),typeof(length2));
   });
-});
 
-describe("CompareLengths", function () {
   it("given12InchAnd1Feet_WhenCompared_ShouldReturnEqual", function() {
     var length1 = new QuantityMeasure(Units.INCH,12).getBaseUnit(function(data){
     return data;
@@ -134,9 +112,7 @@ describe("CompareLengths", function () {
     });
     assert.equal(length1,length2);
   });
-});
 
-describe("CompareLengths", function () {
   it("given0YardAnd0Yard_WhenCompared_ShouldReturnEqual", function() {
     var length1 = new QuantityMeasure(Units.YARD,0).getBaseUnit(function(data){
     return data;
@@ -146,9 +122,7 @@ describe("CompareLengths", function () {
     });
     assert.equal(length1,length2);
   });
-});
 
-describe("CompareLengths", function () {
   it("given3FeetAnd1Yard_WhenCompared_ShouldReturnEqual", function() {
     var length1 = new QuantityMeasure(Units.FEET,3).getBaseUnit(function(data){
     return data;
@@ -158,9 +132,7 @@ describe("CompareLengths", function () {
     });
     assert.equal(length1,length2);
   });
-});
 
-describe("CompareLengths", function () {
   it("given1FeetAnd1Yard_WhenCompared_ShouldReturnNotEqual", function() {
     var length1 = new QuantityMeasure(Units.FEET,1).getBaseUnit(function(data){
     return data;
@@ -170,9 +142,7 @@ describe("CompareLengths", function () {
     });
     assert.notEqual(length1,length2);
   });
-});
 
-describe("CompareLengths", function () {
   it("given1InchAnd1Yard_WhenCompared_ShouldReturnNotEqual", function() {
     var length1 = new QuantityMeasure(Units.INCH,1).getBaseUnit(function(data){
     return data;
@@ -182,9 +152,7 @@ describe("CompareLengths", function () {
     });
     assert.notEqual(length1,length2);
   });
-});
 
-describe("CompareLengths", function () {
   it("given1YardAnd36Inch_WhenCompared_ShouldReturnEqual", function() {
     var length1 = new QuantityMeasure(Units.YARD,1).getBaseUnit(function(data){
     return data;
@@ -194,9 +162,7 @@ describe("CompareLengths", function () {
     });
     assert.equal(length1,length2);
   });
-});
 
-describe("CompareLengths", function () {
   it("given1YardAnd3Feet_WhenCompared_ShouldReturnEqual", function() {
     var length1 = new QuantityMeasure(Units.YARD,1).getBaseUnit(function(data){
     return data;
@@ -206,9 +172,7 @@ describe("CompareLengths", function () {
     });
     assert.equal(length1,length2);
   });
-});
 
-describe("CompareLengths", function () {
   it("given0cmAnd0cm_WhenCompared_ShouldReturnEqual", function() {
     var length1 = new QuantityMeasure(Units.CM,0).getBaseUnit(function(data){
     return data;
@@ -218,9 +182,7 @@ describe("CompareLengths", function () {
     });
     assert.equal(length1,length2);
   });
-});
 
-describe("CompareLengths", function () {
   it("given0cmAnd1cm_WhenCompared_ShouldReturnNotEqual", function() {
     var length1 = new QuantityMeasure(Units.CM,0).getBaseUnit(function(data){
     return data;
@@ -230,9 +192,7 @@ describe("CompareLengths", function () {
     });
     assert.notEqual(length1,length2);
   });
-});
 
-describe("CompareLengths", function () {
   it("given2InchAnd5cm_WhenCompared_ShouldReturnEqual", function() {
     var length1 = new QuantityMeasure(Units.INCH,2).getBaseUnit(function(data){
     return data;
@@ -242,9 +202,7 @@ describe("CompareLengths", function () {
     });
     assert.equal(length1,length2);
   });
-});
 
-describe("CompareLengths", function () {
   it("given2InchAnd2Inch_WhenAdded_ShouldReturn4Inch", function() {
     var length1 = new QuantityMeasure(Units.INCH,2).getBaseUnit(function(data){
     return data;
@@ -257,9 +215,7 @@ describe("CompareLengths", function () {
     });
     assert.equal(sum,4);
   });
-});
 
-describe("CompareLengths", function () {
   it("given1FeetAnd2Inch_WhenAdded_ShouldReturn14Inch", function() {
     var length1 = new QuantityMeasure(Units.FEET,1).getBaseUnit(function(data){
     return data;
@@ -272,9 +228,7 @@ describe("CompareLengths", function () {
     });
     assert.equal(sum,14);
   });
-});
 
-describe("CompareLengths", function () {
   it("given1FeetAnd1Feet_WhenAdded_ShouldReturn24Inch", function() {
     var length1 = new QuantityMeasure(Units.FEET,1).getBaseUnit(function(data){
     return data;
@@ -287,9 +241,7 @@ describe("CompareLengths", function () {
     });
     assert.equal(sum,24);
   });
-});
 
-describe("CompareLengths", function () {
   it("given2InchAnd2.5cm_WhenAdded_ShouldReturn3Inch", function() {
     var length1 = new QuantityMeasure(Units.INCH,2).getBaseUnit(function(data){
     return data;
@@ -314,9 +266,7 @@ describe("CompareVolumes", function () {
     });
     assert.equal(volume1,volume2);
   });
-});
 
-describe("CompareVolumes", function () {
   it("given0LitredAnd1Litre_WhenCompared_ShouldReturnNotEqual", function() {
     var volume1 = new QuantityMeasure(Units.LITRE,0).getBaseUnit(function(data){
     return data;
@@ -326,9 +276,7 @@ describe("CompareVolumes", function () {
     });
     assert.notEqual(volume1,volume2);
   });
-});
 
-describe("CompareVolumes", function () {
   it("given1LitredAnd1000MiliLitre_WhenCompared_ShouldReturnEqual", function() {
     var volume1 = new QuantityMeasure(Units.LITRE,1).getBaseUnit(function(data){
     return data;
@@ -338,9 +286,7 @@ describe("CompareVolumes", function () {
     });
     assert.equal(volume1,volume2);
   });
-});
 
-describe("CompareVolumes", function () {
   it("given1GallonAnd3.78Litre_WhenCompared_ShouldReturnEqual", function() {
     var volume1 = new QuantityMeasure(Units.GALLON,1).getBaseUnit(function(data){
     return data;
@@ -350,9 +296,7 @@ describe("CompareVolumes", function () {
     });
     assert.equal(volume1,volume2);
   });
-});
 
-describe("CompareVolumes", function () {
   it("given1GallonAnd3.78Litres_WhenAdded_ShouldReturn7.56Litres", function() {
     var volume1 = new QuantityMeasure(Units.GALLON,1).getBaseUnit(function(data){
     return data;
@@ -365,9 +309,7 @@ describe("CompareVolumes", function () {
     });
     assert.equal(sum,7.56);
   });
-});
 
-describe("CompareVolumes", function () {
   it("given1LitreAnd1000MiliLitres_WhenAdded_ShouldReturn2Litres", function() {
     var volume1 = new QuantityMeasure(Units.LITRE,1).getBaseUnit(function(data){
     return data;
@@ -392,9 +334,7 @@ describe("CompareWeights", function () {
     });
     assert.equal(weight1,weight2);
   });
-});
 
-describe("CompareWeights", function () {
   it("given0KgAnd1Kg_WhenCompared_ShouldReturnNotEqual", function() {
     var weight1 = new QuantityMeasure(Units.KG,0).getBaseUnit(function(data){
     return data;
@@ -404,9 +344,7 @@ describe("CompareWeights", function () {
     });
     assert.notEqual(weight1,weight2);
   });
-});
 
-describe("CompareWeights", function () {
   it("given1KgAnd1000g_WhenCompared_ShouldReturnEqual", function() {
     var weight1 = new QuantityMeasure(Units.KG,1).getBaseUnit(function(data){
     return data;
@@ -416,9 +354,7 @@ describe("CompareWeights", function () {
     });
     assert.equal(weight1,weight2);
   });
-});
 
-describe("CompareWeights", function () {
   it("given1TonneAnd1000Kg_WhenCompared_ShouldReturnEqual", function() {
     var weight1 = new QuantityMeasure(Units.TONNE,1).getBaseUnit(function(data){
     return data;
@@ -428,9 +364,7 @@ describe("CompareWeights", function () {
     });
     assert.equal(weight1,weight2);
   });
-});
 
-describe("CompareWeights", function () {
   it("given1TonneAnd1000Gram_WhenAdded_ShouldReturn1001Kg", function() {
     var weight1 = new QuantityMeasure(Units.TONNE,1).getBaseUnit(function(data){
     return data;

@@ -37,11 +37,7 @@ class QuantityMeasure{
     * @returns callback with the basevalue
     */
     getBaseUnit = (callback) => {
-      try{
-        return callback(null,this.VALUE);
-      }catch(err){
-        return callback(err,null);
-      }
+      return callback(this.VALUE);
     };
 
   /**
@@ -50,12 +46,8 @@ class QuantityMeasure{
   * @returns callback with the added value
   */
     static add = (quantity1,quantity2,callback) => {
-        try{
           var sum = quantity1 + quantity2;
-          return callback(null,sum);
-        }catch(err){
-          return callback(err,null);
-        }
+          return callback(sum);
     };
 
   /**
@@ -64,11 +56,7 @@ class QuantityMeasure{
   * @returns callback with the converted temperature
   */
     static temperatureConversion = (temperature,callback) => {
-        try{
-          return callback(null,(temperature * 9 / 5) + 32);
-        }catch(err){
-          return callback(err,null);
-        }
+          return callback((temperature * 9 / 5) + 32);
     };
 }
 
