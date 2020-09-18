@@ -1,3 +1,7 @@
+/**
+  * @description constant variables are declared to store quantity units
+  * @const Units
+  */
 const Units = {
     FEET: 12,
     INCH: 1,
